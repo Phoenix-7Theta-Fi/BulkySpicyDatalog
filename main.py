@@ -1,5 +1,6 @@
 import streamlit as st
 from supabase import create_client, Client
+import os
 
 # --- Supabase Configuration ---
 SUPABASE_URL = st.secrets["SUPABASE_URL"]
@@ -75,5 +76,11 @@ else:
 
 # --- Main Content (if not logged in) ---
 if not st.session_state.get("logged_in", False):
-    st.image("ayurveda_image.jpg", use_column_width=True)  # Replace with actual image path
     st.write("Learn more about the benefits of Ayurveda and how it can improve your well-being.")
+    st.write("Ayurveda is an ancient holistic healing system that originated in India. It focuses on balancing the mind, body, and spirit to promote overall health and wellness.")
+    st.write("Some key principles of Ayurveda include:")
+    st.write("1. Personalized approach to health")
+    st.write("2. Emphasis on prevention")
+    st.write("3. Use of natural remedies and therapies")
+    st.write("4. Mind-body connection")
+    st.write("5. Balanced lifestyle")
